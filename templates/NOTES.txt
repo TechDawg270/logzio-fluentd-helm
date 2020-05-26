@@ -1,0 +1,13 @@
+Logz.io fluentd is being deployed to your cluster.
+You should see logs flowing once the fluentd image
+is downloaded and started.
+
+You can check the deployment status by running:
+
+kubectl get daemonset {{ .Chart.Name }} --namespace {{ .Release.Namespace }}
+
+Give your logs some time to get from your system to ours,
+and then open [Kibana](https://app.logz.io/#/dashboard/kibana).
+
+If you still don't see your logs,
+see [log shipping troubleshooting](https://docs.logz.io/user-guide/log-shipping/log-shipping-troubleshooting.html).

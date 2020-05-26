@@ -1,0 +1,27 @@
+# Namespace to deploy agent in (Optional: Will default to release namespace)
+namespace:
+
+image:
+  name: "logzio/logzio-k8s"
+  tag: "1.1.0"
+
+
+# Use RBAC
+enableRbac: true
+
+# Logz.io shipping credentials (stored as k8s secret)
+apiAccessToken:
+apiListener: "https://listener.logz.io:8071"
+
+# Configure resource requests and limits.
+# https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+resources: {}
+  #  limits:
+  #    cpu: 500m
+  #    memory: 200Mi
+  #  requests:
+  #    cpu: 50m
+  #    memory: 75Mi
+
+# Set priority class
+priorityClassName: ""
